@@ -24,7 +24,13 @@ namespace RoverList
 
         public override void Add(int Position, object data)
         {
-            throw new NotImplementedException();
+            Node next = head;
+            while (next != null)
+            {
+                Console.WriteLine(next.Data);
+                next = next.Next;
+            }
+
         }
 
         public override void Clear()
@@ -34,7 +40,7 @@ namespace RoverList
 
         public override Node ElementAt(int Position)
         {
-            throw new NotImplementedException();
+            
         }
 
         public override void ListNodes()
