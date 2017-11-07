@@ -40,7 +40,7 @@ namespace RoverList
 
         public override Node ElementAt(int Position)
         {
-            
+            throw new NotImplementedException(); 
         }
 
         public override void ListNodes()
