@@ -9,17 +9,26 @@ namespace RoverList
     class RoverList : RoverListBase
     {
         // Add any variables you need here
-        
+        int c = 0;
         public RoverList ()
         {
 
         }
 
-        public override int Count => throw new NotImplementedException();
+        public override int Count
+        {
+
+            get
+            {
+                return c;
+
+            }
+        }
+
 
         public override void Add(object data)
         {
-            throw new NotImplementedException();
+          
         }
 
         public override void Add(int Position, object data)
