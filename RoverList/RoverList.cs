@@ -34,10 +34,17 @@ namespace RoverList
         public override void Add(int Position, object data)
         {
             Node next = head;
+            int i = 0; 
             while (next != null)
             {
                 Console.WriteLine(next.Data);
+                if (i == Position)
+                {
+                    data = next;
+                }
                 next = next.Next;
+
+                i++;
             }
 
         }
