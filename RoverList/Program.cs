@@ -12,11 +12,11 @@ namespace RoverList
         {
             // TODO:  Implement the RoverList class
             RoverList poop = new RoverList();
-<<<<<<< HEAD
+
             // TODO:  Create a RoverList and then fill it with 16 words
 
 
-=======
+
             poop.Add("Hey");
             poop.Add("Now");
             poop.Add("You're");
@@ -38,7 +38,7 @@ namespace RoverList
             poop.ListNodes(); 
             // TODO:  Remove every 3rd word
             // TODO:  Print out the list
->>>>>>> origin/master
+
 
             // TODO:  Print out the list
 
