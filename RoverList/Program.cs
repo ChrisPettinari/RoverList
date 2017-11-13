@@ -37,17 +37,47 @@ namespace RoverList
             // TODO:  Print out the list
             poop.ListNodes(); 
             // TODO:  Remove every 3rd word
+            for(int i = 0; i < poop.Count; i++)
+            {
+                if(i % 3 == 0)
+                {
+                    poop.RemoveAt(i);
+                }
+            }
+            // TODO:  Print out the list
+            poop.ListNodes();
+
             // TODO:  Print out the list
 
-
+            // TODO:  Remove every 3rd word
+            for (int i = 0; i < poop.Count; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    poop.RemoveAt(i);
+                }
+            }
             // TODO:  Print out the list
+            poop.ListNodes();
+            // TODO:  Prompt the user to input words, add those words to the list until they enter the word "done"
 
-                // TODO:  Remove every 3rd word
-                // TODO:  Print out the list
-                
-                // TODO:  Prompt the user to input words, add those words to the list until they enter the word "done"
-                // TODO:  Print out the list
+            Console.WriteLine("FEED ME WORDS ");
+            
 
+            while (true)
+            {
+                String newNode = Console.ReadLine();
+
+                if (newNode == "done")
+                {
+                    break;
+                }
+
+                poop.Add(newNode);
+
+            }
+            // TODO:  Print out the list
+            poop.ListNodes();
                 // TODO:  Prompt the user to input words, add those words to the FRONT of the list until they enter the word "done"
                 // TODO:  Print out the list
 

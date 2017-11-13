@@ -101,10 +101,12 @@ namespace RoverList
                 if (i == Position && next != null)
                 {
                     next = null;
+                    count--;
                     return true;
                 }
                 next = next.Next;
             }
+            count--;
             return false;
         }
     }
