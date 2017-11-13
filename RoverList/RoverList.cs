@@ -66,7 +66,20 @@ namespace RoverList
 
         public override Node ElementAt(int Position)
         {
-            throw new NotImplementedException(); 
+            Node next = head;
+            for(int c = 0 ; c< Position; c++)
+            {
+                if(c == Position && next != null)
+                {
+                    return next;
+                }
+                
+            }
+
+            return null;
+
+
+
         }
 
         public override void ListNodes()
