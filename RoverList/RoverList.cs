@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +17,9 @@ namespace RoverList
 
         public override int Count
         {
-
             get
             {
                 return count;
-
             }
         }
 
@@ -57,7 +55,13 @@ namespace RoverList
 
         public override void Clear()
         {
-            
+            Node next = head;
+            next = null;
+
+            while (next.Next != null)
+            {
+                next.Next = null;
+            }
         }
 
         public override Node ElementAt(int Position)
@@ -77,8 +81,18 @@ namespace RoverList
 
         public override bool RemoveAt(int Position)
         {
-            count--;
-            throw new NotImplementedException();
+            Node next = head;
+
+            for(int i = 0; i < Position; i++)
+            {
+                if (i == Position && next != null)
+                {
+                    next = null;
+                    return true;
+                }
+                next = next.Next;
+            }
+            return false;
         }
     }
 }
