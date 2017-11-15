@@ -105,7 +105,7 @@ namespace RoverList
             Node next = head;
          
 
-            for(int i = 0; i < Position  ; i++)
+            for(int i = 0; i < Position  -1; i++)
             {
                 next = next.Next;
             }
