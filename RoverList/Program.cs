@@ -19,46 +19,49 @@ namespace RoverList
 
             poop.Add("Hey");
             poop.Add("Now");
-            poop.Add("You're");
+            poop.Add("You're");//
             poop.Add("An");
             poop.Add("All");
-            poop.Add("Star");
+            poop.Add("Star");//
             poop.Add("Get");
             poop.Add("Your");
-            poop.Add("Game");
+            poop.Add("Game");//
             poop.Add("On");
             poop.Add("Go");
-            poop.Add("Play");
+            poop.Add("Play");//
             poop.Add("I");
             poop.Add("Want");
-            poop.Add("To");
+            poop.Add("To");//
             poop.Add("Die");
 
             // TODO:  Print out the list
-            poop.ListNodes(); 
+           
+            poop.ListNodes();
+            Console.WriteLine("-----------------------------------");
             // TODO:  Remove every 3rd word
-            for(int i = 0; i < poop.Count; i++)
+            for (int i = 2; i < poop.Count; i = i+2)
             {
-                if(i % 3 == 0)
-                {
+                
                     poop.RemoveAt(i);
-                }
+               
             }
             // TODO:  Print out the list
             poop.ListNodes();
+            Console.WriteLine("-----------------------------------");
 
             // TODO:  Print out the list
-
+            poop.ListNodes();
+            Console.WriteLine("-----------------------------------");
             // TODO:  Remove every 3rd word
-            for (int i = 0; i < poop.Count; i++)
+            for (int i = 2; i < poop.Count; i = i + 2)
             {
-                if (i % 3 == 0)
-                {
-                    poop.RemoveAt(i);
-                }
+
+                poop.RemoveAt(i);
+
             }
             // TODO:  Print out the list
             poop.ListNodes();
+            Console.WriteLine("-----------------------------------");
             // TODO:  Prompt the user to input words, add those words to the list until they enter the word "done"
 
             Console.WriteLine("FEED ME WORDS ");
@@ -77,16 +80,36 @@ namespace RoverList
 
             }
             // TODO:  Print out the list
+
+            Console.WriteLine("-----------------------------------");
             poop.ListNodes();
-                // TODO:  Prompt the user to input words, add those words to the FRONT of the list until they enter the word "done"
-                // TODO:  Print out the list
+            Console.WriteLine("-----------------------------------");
+            // TODO:  Prompt the user to input words, add those words to the FRONT of the list until they enter the word "done"
+            Console.WriteLine("FEED ME MORE WORDS ");
+            while (true)
+            {
+                String newNode = Console.ReadLine();
 
-                // TODO:  Remove every word with an odd length
-                // TODO:  Print out the list
+                if (newNode == "done")
+                {
+                    break;
+                }
 
-                // TODO:  Clear the list
-                // TODO:  Print out the list
+                poop.Add(0,newNode);
 
+            }
+            // TODO:  Print out the list
+            Console.WriteLine("-----------------------------------");
+            poop.ListNodes();
+            // TODO:  Remove every word with an odd length
+            // TODO:  Print out the list
+
+            // TODO:  Clear the list
+            poop.Clear();
+            // TODO:  Print out the list
+            Console.WriteLine("-----------------------------------");
+            poop.ListNodes();
+            Console.WriteLine("-----------------------------------");
 
         }
     }
