@@ -102,8 +102,18 @@ namespace RoverList
             Console.WriteLine("-----------------------------------");
             poop.ListNodes();
             // TODO:  Remove every word with an odd length
-            // TODO:  Print out the list
+            for(int i = 0; i < poop.Count;i++)
+            {
+                String node = poop.ElementAt(i).Data.ToString();
+                if(node.Length % 2 != 0 ||node.Length == 1)
+                {
+                    poop.RemoveAt(i);
+                }
+            }
 
+            // TODO:  Print out the list
+            Console.WriteLine("-----------------------------------");
+            poop.ListNodes();
             // TODO:  Clear the list
             poop.Clear();
             // TODO:  Print out the list

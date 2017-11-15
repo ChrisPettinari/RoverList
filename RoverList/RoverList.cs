@@ -75,9 +75,9 @@ namespace RoverList
         public override Node ElementAt(int Position)
         {
             Node next = head;
-            for(int c = 0 ; c< Position; c++)
+            for(int i = 0 ; i < count; i++)
             {
-                if(c == Position && next != null)
+                if(i == Position && next != null)
                 {
                     return next;
                 }
@@ -105,12 +105,15 @@ namespace RoverList
             Node next = head;
          
 
-            for(int i = 0; i < Position - 1; i++)
+            for(int i = 0; i < Position  ; i++)
             {
                 next = next.Next;
             }
 
-            next.Next = next.Next.Next;
+         
+              next.Next = next.Next.Next;
+           
+
             count--;
             return false;
         }
