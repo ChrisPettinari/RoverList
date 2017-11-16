@@ -104,10 +104,9 @@ namespace RoverList
             // TODO:  Remove every word with an odd length
             for(int i = 0; i < poop.Count;i++)
             {
-                String node = poop.ElementAt(i).Data.ToString();
-                if(node.Length % 2 != 0 ||node.Length == 1)
+                if(poop.ElementAt(i).Data.ToString().Length % 2 != 0|| poop.ElementAt(i).Data.ToString().Length == 1)
                 {
-                    poop.RemoveAt(i);
+                    poop.RemoveAt(i); 
                 }
             }
 
