@@ -42,15 +42,16 @@ namespace RoverList
         public override void Add(int Position, object data)
         {
             Node next = head;
+
+
             for(int i = 0; i < count; i++)
             {
-                if(i == Position)
+                if (i == Position)
                 {
                     next = new Node(data);
-                    current = next;
                     count++;
-
-                } 
+                }
+                next = next.Next;
             }
         }
 
@@ -102,18 +103,28 @@ namespace RoverList
 
         public override bool RemoveAt(int Position)
         {
-            Node next = head;
+            Node next;
+            if (head == null)
+            {
+                return true;
+            }
+            else
+            {
+                next = head;
+            }
          
+            if(Position< 0 || Position >= count)
+            {
+                throw new IndexOutOfRangeException();
+            }
 
             for(int i = 0; i < Position  -1; i++)
             {
                 next = next.Next;
             }
 
-         
-              next.Next = next.Next.Next;
-           
-
+            next.Next = next.Next.Next;
+            
             count--;
             return false;
         }

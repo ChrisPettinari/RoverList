@@ -20,29 +20,29 @@ namespace RoverList
             poop.Add("Hey");
             poop.Add("Now");
             poop.Add("You're");//
-            poop.Add("An");
+            poop.Add("An");//2
             poop.Add("All");
             poop.Add("Star");//
-            poop.Add("Get");
+            poop.Add("Get");//2
             poop.Add("Your");
             poop.Add("Game");//
-            poop.Add("On");
+            poop.Add("On");//2
             poop.Add("Go");
             poop.Add("Play");//
-            poop.Add("I");
+            poop.Add("I");//2
             poop.Add("Want");
             poop.Add("To");//
-            poop.Add("Die");
+            poop.Add("Die");//2
 
             // TODO:  Print out the list
            
             poop.ListNodes();
             Console.WriteLine("-----------------------------------");
             // TODO:  Remove every 3rd word
-            for (int i = 2; i < poop.Count; i = i+2)
+            for (int i = 0; i < poop.Count; i = i+3)
             {
                 
-                    poop.RemoveAt(i);
+                    poop.RemoveAt(i-1);
                
             }
             // TODO:  Print out the list
@@ -88,23 +88,23 @@ namespace RoverList
             Console.WriteLine("FEED ME MORE WORDS ");
             while (true)
             {
-                String newNode = Console.ReadLine();
+                object newStuff = Console.ReadLine();
 
-                if (newNode == "done")
+                if (newStuff.ToString() == "done")
                 {
                     break;
                 }
 
-                poop.Add(0,newNode);
+                poop.Add(0,newStuff);
 
             }
             // TODO:  Print out the list
             Console.WriteLine("-----------------------------------");
             poop.ListNodes();
             // TODO:  Remove every word with an odd length
-            for(int i = 0; i < poop.Count;i++)
+            for (int i = 0; i < poop.Count;i++)
             {
-                if(poop.ElementAt(i).Data.ToString().Length % 2 != 0|| poop.ElementAt(i).Data.ToString().Length == 1)
+                if (poop.ElementAt(i).Data.ToString().Length % 2 != 0|| poop.ElementAt(i).Data.ToString().Length == 1)
                 {
                     poop.RemoveAt(i); 
                 }

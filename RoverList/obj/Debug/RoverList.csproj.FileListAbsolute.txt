@@ -4,3 +4,9 @@ C:\Users\eahscs\Documents\GitHub\RoverList\RoverList\bin\Debug\RoverList.exe
 C:\Users\eahscs\Documents\GitHub\RoverList\RoverList\bin\Debug\RoverList.pdb
 C:\Users\eahscs\Documents\GitHub\RoverList\RoverList\obj\Debug\RoverList.exe
 C:\Users\eahscs\Documents\GitHub\RoverList\RoverList\obj\Debug\RoverList.pdb
+C:\Users\eahscs\Documents\Visual Studio 2017\RoverList\RoverList\bin\Debug\RoverList.exe.config
+C:\Users\eahscs\Documents\Visual Studio 2017\RoverList\RoverList\bin\Debug\RoverList.exe
+C:\Users\eahscs\Documents\Visual Studio 2017\RoverList\RoverList\bin\Debug\RoverList.pdb
+C:\Users\eahscs\Documents\Visual Studio 2017\RoverList\RoverList\obj\Debug\RoverList.csprojResolveAssemblyReference.cache
+C:\Users\eahscs\Documents\Visual Studio 2017\RoverList\RoverList\obj\Debug\RoverList.exe
+C:\Users\eahscs\Documents\Visual Studio 2017\RoverList\RoverList\obj\Debug\RoverList.pdb
