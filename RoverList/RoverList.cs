@@ -102,6 +102,8 @@ namespace RoverList
         public override void ListNodes()
         {
             Node node = head;
+            if (node == null) { node = node.Next; }
+
             while (node != null)
             {
                 Console.WriteLine(node.Data + " ");
