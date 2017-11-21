@@ -109,7 +109,7 @@ namespace RoverList
                     poop.RemoveAt(i); 
                 }
             }
-
+            poop.RemoveAt(0);
             // TODO:  Print out the list
             Console.WriteLine("-----------------------------------");
             poop.ListNodes();

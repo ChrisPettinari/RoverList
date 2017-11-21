@@ -86,19 +86,20 @@ namespace RoverList
 
         public override Node ElementAt(int Position)
         {
-            Node next = head;
-            for(int i = 0 ; i < count; i++)
+            Node node = head;
+
+            if (Position == 0)
+                return node;
+            else
             {
-                if(i == Position && next != null)
+                for(int i = 0; i < Position; i++)
                 {
-                    return next;
+                    node = node.Next;
                 }
-                
+                return node;
             }
-
-            return null;
         }
-
+         
         public override void ListNodes()
         {
             Node node = head;
@@ -111,28 +112,30 @@ namespace RoverList
 
         public override bool RemoveAt(int Position)
         {
-            Node next;
-            if (head == null)
-            {
-                return true;
-            }
-            else
-            {
-                next = head;
-            }
-         
-            //its korean i swear
+            Node next = head;
+            Node prev = null;
 
-            for(int i = 0; i < Position  -1; i++)
+
+            for (int i = 0; i < count; i++)
             {
+                if (i == Position)
+                {
+                    Node node = new Node(null);
+                    node.Next = next;
+
+                    if (prev != null)
+                        prev.Next = node;
+                    else
+                        head = node;
+
+                    count++;
+                    return true;
+                }
+            
+                prev = next;
                 if (next.Next != null)
                     next = next.Next;
             }
-
-            if (next.Next.Next != null)
-                next.Next = next.Next.Next; 
-            
-            count--;
             return false;
         }
     }
