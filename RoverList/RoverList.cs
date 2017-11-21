@@ -40,18 +40,29 @@ namespace RoverList
         }
 
         public override void Add(int Position, object data)
-        {
+        {           
             Node next = head;
+            Node prev = null;
 
 
             for(int i = 0; i < count; i++)
             {
                 if (i == Position)
                 {
-                    next = new Node(data);
+                    Node node = new Node(data);
+                    node.Next = next;
+
+                    if (prev != null)
+                        prev.Next = node;
+                    else
+                        head = node;
+
                     count++;
                 }
-                next = next.Next;
+
+                prev = next;
+                if (next.Next != null)
+                    next = next.Next;
             }
         }
 
@@ -86,9 +97,6 @@ namespace RoverList
             }
 
             return null;
-
-
-
         }
 
         public override void ListNodes()
@@ -113,17 +121,16 @@ namespace RoverList
                 next = head;
             }
          
-            if(Position< 0 || Position >= count)
-            {
-                throw new IndexOutOfRangeException();
-            }
+            //its korean i swear
 
             for(int i = 0; i < Position  -1; i++)
             {
-                next = next.Next;
+                if (next.Next != null)
+                    next = next.Next;
             }
 
-            next.Next = next.Next.Next;
+            if (next.Next.Next != null)
+                next.Next = next.Next.Next; 
             
             count--;
             return false;

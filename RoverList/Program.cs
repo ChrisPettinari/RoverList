@@ -39,10 +39,10 @@ namespace RoverList
             poop.ListNodes();
             Console.WriteLine("-----------------------------------");
             // TODO:  Remove every 3rd word
-            for (int i = 0; i < poop.Count; i = i+3)
+            for (int i = 2; i < poop.Count; i = i+2)
             {
                 
-                    poop.RemoveAt(i-1);
+                    poop.RemoveAt(i);
                
             }
             // TODO:  Print out the list
