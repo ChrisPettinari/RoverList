@@ -17,22 +17,22 @@ namespace RoverList
 
 
 
-            poop.Add("Hey");
-            poop.Add("Now");
-            poop.Add("You're");//
-            poop.Add("An");//2
-            poop.Add("All");
-            poop.Add("Star");//
-            poop.Add("Get");//2
-            poop.Add("Your");
-            poop.Add("Game");//
-            poop.Add("On");//2
-            poop.Add("Go");
-            poop.Add("Play");//
-            poop.Add("I");//2
-            poop.Add("Want");
-            poop.Add("To");//
-            poop.Add("Die");//2
+            poop.Add("odd");
+            poop.Add("even");
+            poop.Add("even");//
+            poop.Add("even");//2
+            poop.Add("even");
+            poop.Add("even");//
+            poop.Add("odd");
+            poop.Add("odd");//2
+            poop.Add("odd");//
+            poop.Add("odd");
+            poop.Add("odd");
+            poop.Add("odd");//
+            poop.Add("odd");//2
+            poop.Add("even");
+            poop.Add("even");//
+            poop.Add("even");
 
             // TODO:  Print out the list
            
@@ -102,14 +102,14 @@ namespace RoverList
             Console.WriteLine("-----------------------------------");
             poop.ListNodes();
             // TODO:  Remove every word with an odd length
-            for (int i = 0; i < poop.Count;i++)
+            for (int i = 0; i < poop.Count-1;i++)
             {
                 if (poop.ElementAt(i).Data.ToString().Length % 2 != 0|| poop.ElementAt(i).Data.ToString().Length == 1)
                 {
                     poop.RemoveAt(i); 
                 }
             }
-            poop.RemoveAt(0);
+            
             // TODO:  Print out the list
             Console.WriteLine("-----------------------------------");
             poop.ListNodes();

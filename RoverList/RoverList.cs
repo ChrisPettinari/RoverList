@@ -103,7 +103,7 @@ namespace RoverList
         public override void ListNodes()
         {
             Node node = head;
-            if (node == null) { node = node.Next; }
+            
 
             while (node != null)
             {
@@ -114,31 +114,26 @@ namespace RoverList
 
         public override bool RemoveAt(int Position)
         {
-            Node next = head;
-            Node prev = null;
+            Node node = head;
 
-
-            for (int i = 0; i < count; i++)
+            if (Position < 0 || Position >= count)
             {
-                if (i == Position)
-                {
-                    Node node = new Node(null);
-                    node.Next = next;
-
-                    if (prev != null)
-                        prev.Next = node;
-                    else
-                        head = node;
-
-                    count++;
-                    return true;
-                }
-            
-                prev = next;
-                if (next.Next != null)
-                    next = next.Next;
+                throw new IndexOutOfRangeException();
             }
+
+            for (int i = 0; i < Position - 1; i++)
+            {
+                
+                if (node.Next != null)
+                    node = node.Next;
+            }
+
+            if (node.Next.Next != null)
+                node.Next = node.Next.Next;
+
+            count--;
             return false;
+
         }
     }
 }
